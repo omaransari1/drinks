@@ -1,0 +1,31 @@
+<!-- <h1> Drinks</h1>
+
+<div ng-app="app">
+  <div ng-controller="drinksCtrl"> 
+    <div ng-repeat="drink in drinks">
+      <p>{{drink.name}}</p>
+      <p>{{drink.ingredients}}</p>
+    </div>
+  </div>
+
+</div> -->
+<h1>Drinks app!</h1>
+<div ng-app="app">
+  <div ng-controller="drinksCtrl" ng-init="setup">
+    <h3>Drinks</h3>
+    <ul>
+      <li ng-repeat="drink in drinks">
+        <h2>{{drink.Beverage}}</h2>
+        <p>{{drink.AlcoholContent}}</p>
+        <a href="#" ng-click="deleteDrink(drink)">Delete</a>
+      </li>
+    </ul>
+    <h4>Total number of drinks: {{drinks.length}}</h4>
+    <h3> Add new drink!</h3>
+    <div>
+    <label>Name:</label><input ng-model="newPersonName">
+    <label>Alcohol Content:</label><input ng-model="newPersonBio">
+    <button ng-click="addPerson(newPersonName, newPersonBio)">Add Person</button>
+    </div>
+  </div>
+</div>
